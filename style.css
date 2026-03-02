@@ -1,4 +1,4 @@
-/* ===== Base ===== */
+/* ====== Reset & Base ====== */
 * {
   margin: 0;
   padding: 0;
@@ -6,42 +6,129 @@
 }
 
 body {
-  font-family: "Noto Sans JP", sans-serif;
-  line-height: 1.7;
+  font-family: 'Noto Sans JP', sans-serif;
   color: #333;
-  background: #f9fbf8;
+  background-color: #ffffff;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* ===== Layout ===== */
+/* ====== Layout ====== */
 .container {
   width: 90%;
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
 }
 
-/* ===== Header ===== */
-header {
-  background: #e8f5e9;
-  padding: 60px 0;
+.section {
+  padding: 100px 0;
+}
+
+/* ====== Typography ====== */
+h1, h2, h3 {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
   text-align: center;
 }
 
-.cta-btn {
-  display: inline-block;
-  background: #4caf50;
-  color: white;
-  padding: 14px 28px;
-  border-radius: 50px;
-  margin-top: 20px;
-  font-weight: bold;
-  transition: 0.3s;
+p {
+  font-size: 1rem;
 }
 
-.cta-btn:hover {
-  background: #43a047;
+/* ====== Buttons ====== */
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 50px;
+  background-color: #5FAF6A;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover {
+  background-color: #4c9958;
+  transform: translateY(-2px);
+}
+
+/* ====== Hero Section ====== */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+/* ====== Cards ====== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: #f6fbf7;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ====== Footer ====== */
+footer {
+  background: #f6fbf7;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
 }
