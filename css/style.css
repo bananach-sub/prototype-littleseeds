@@ -195,3 +195,56 @@ nav a:hover {
 body {
   padding-top: 80px;
 }
+/* ====== Hamburger ====== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  transition: 0.3s ease;
+}
+
+/* アクティブ時 */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* モバイルメニュー */
+@media (max-width: 768px) {
+
+  nav ul {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 70%;
+    height: calc(100vh - 80px);
+    background: #ffffff;
+    flex-direction: column;
+    padding: 40px;
+    gap: 25px;
+    transition: 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.05);
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
