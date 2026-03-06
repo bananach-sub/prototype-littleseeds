@@ -276,3 +276,34 @@ color:#6bbf77;
 font-weight:600;
 margin-bottom:15px;
 }
+.contact-form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.form-group{
+display:flex;
+flex-direction:column;
+gap:6px;
+}
+
+.form-group label{
+font-weight:600;
+}
+
+.form-group input,
+.form-group textarea{
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:16px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+outline:none;
+border-color:#4CAF50;
+}
